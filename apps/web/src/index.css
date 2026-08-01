@@ -1,0 +1,106 @@
+/*
+  TEMPLATE STYLES: These styles are used as a base template.
+  AI is allowed to modify these styles as needed.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: clip;
+  color: hsl(var(--foreground));
+}
+
+h1, h2, h3, h4, h5, .font-display {
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+}
+.reveal.in-view {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; animation: none !important; }
+}
+
+/*
+  ---break---
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 212 45% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 212 45% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 45% 12%;
+    --primary: 210 62% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 210 62% 24%;
+    --muted: 210 24% 95%;
+    --muted-foreground: 210 12% 42%;
+    --accent: 187 60% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 187 60% 38%;
+    --radius: 0.75rem;
+    --brand-deep: 210 68% 18%;
+    --brand-teal: 187 65% 36%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
